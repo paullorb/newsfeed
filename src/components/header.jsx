@@ -1,13 +1,18 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import '../styles/index.css'
 
 export default function Header() {
   const [count, setCount] = useState(0);
 
+  const styles = {
+    'grid-area':'header',
+    border: '3px solid red',
+  }
   return (
-    <div>
+    <section style={styles}>
       <h1>Header</h1>
       <p>{count}</p>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
-    </div>
+      <button onClick={() => setCount(count + 1)}>Like</button>
+    </section>
   );
 }
