@@ -180,3 +180,13 @@ export const tempData = [
     url: "https://observablehq.com/@chaosalchemist/wasm-playground",
   },
 ];
+
+/*
+    url: http://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=5&page=1  
+    <ul>
+        {news.map(function (item, i) {
+          return <li key={i}>{item._highlightResult.title.value}</li>;
+        })}
+      </ul>
+
+*/
