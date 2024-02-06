@@ -31,7 +31,8 @@ export default function Card () {
       <div style={styleimg}><img /></div>
       <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ratione eveniet pariatur. Aspernatur, eaque. Culpa obcaecati eius consequatur et alias ipsum unde voluptatem animi assumenda. Sequi vitae reiciendis autem quod?</p></div>
       <div><h2>source website</h2></div>
-      <div><h6>comments</h6></div>
+      <div><h5>comments</h5></div>
+      <div><h6>buttons</h6></div>
     </div>
   )
 }
