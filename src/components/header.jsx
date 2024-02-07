@@ -1,13 +1,13 @@
-import { useState } from 'react';
-import '../styles/index.css'
+import { useState } from "react";
+import "../styles/index.css";
 
 export default function Header() {
   const [count, setCount] = useState(0);
 
   const styles = {
-    'grid-area':'header',
-    border: '3px solid red',
-  }
+    gridArea: "header",
+    border: "3px solid red",
+  };
   return (
     <section style={styles}>
       <h1>Header</h1>
