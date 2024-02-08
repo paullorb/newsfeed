@@ -18,11 +18,7 @@ export default function News({ news }) {
           return <Card key={i} item={item} />;
         })
       ) : (
-        <CircleLoader
-          cssOverride={{ margin: "25% auto" }}
-          size="400"
-          color="#364fd6"
-        />
+        <CircleLoader cssOverride={{ margin: "25% auto" }} color="#364fd6" />
       )}
     </main>
   );
