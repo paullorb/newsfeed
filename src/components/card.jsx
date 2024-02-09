@@ -1,8 +1,7 @@
 import { emitFormatedDate } from "../helpers/emitFormatedDate";
 import { fetchUrl } from "../helpers/fetchUrl";
 import { truncateString } from "../helpers/truncateString";
-
-const imgUrl = "https://images.unsplash.com/photo-1566511530219-93e643186ea6?q=80&w=2038&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+import { fetchRandomString } from "../helpers/fetchRandomString";
 
 export default function Card({ item }) {
   const styles = {
@@ -26,7 +25,6 @@ export default function Card({ item }) {
 
   const styleimg = {
     width: "100%",
-    backgroundImage: `url(${imgUrl})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -42,7 +40,10 @@ export default function Card({ item }) {
         <h3>{truncateString(`${item._highlightResult.title.value}`, 80)}</h3>
       </div>
       <div style={styleimg}>
-        <img />
+        <img
+          style={{ width: "100%" }}
+          src={`https://picsum.photos/seed/${fetchRandomString(5)}/600/400`}
+        />
       </div>
       <div>
         <span style={styleSpan}>
