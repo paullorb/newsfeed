@@ -9,16 +9,20 @@ export default function Header({
   handledSearch,
 }) {
   const stylebtn = {
-    width: "6rem",
+    width: "100%",
     padding: "0.5rem",
+
   };
   const styles = {
     gridArea: "header",
-    border: "3px solid red",
+    // border: "3px solid red",
+    display: "flex",
+    flexDirection: "column",
+    margin: "1rem 1rem 1rem 0rem",
   };
   return (
     <section style={styles}>
-      <h1>Header</h1>
+      <h1>feedMeNews</h1>
       <p>
         {page > 1 && (
           <button style={stylebtn} onClick={handledPrevPage}>

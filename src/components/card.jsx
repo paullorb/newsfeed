@@ -2,28 +2,31 @@ import { emitFormatedDate } from "../helpers/emitFormatedDate";
 import { fetchUrl } from "../helpers/fetchUrl";
 import { truncateString } from "../helpers/truncateString";
 
+const imgUrl = "https://images.unsplash.com/photo-1566511530219-93e643186ea6?q=80&w=2038&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+
 export default function Card({ item }) {
   const styles = {
     flex: "0 0 33.333333%",
-    border: "3px solid red",
+    // border: "3px solid red",
     display: "flex",
     flexDirection: "column",
     margin: "1%",
     maxWidth: "30%",
-    height: "30rem",
+    height: "25rem",
   };
 
   const styleh1 = {
     backgroundColor: "black",
     color: "white",
-    fontSize: "1.5rem",
+    fontSize: "1.1rem",
     borderRadius: "10%",
-    padding: "0% 10% 0%",
+    padding: "0% 5% 0%",
+    height: "4rem",
   };
 
   const styleimg = {
     width: "100%",
-    backgroundImage: "url(https://placehold.co/600x400",
+    backgroundImage: `url(${imgUrl})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -36,7 +39,7 @@ export default function Card({ item }) {
   return (
     <div style={styles}>
       <div style={styleh1}>
-        <h3>{truncateString(`${item._highlightResult.title.value}`, 24)}</h3>
+        <h3>{truncateString(`${item._highlightResult.title.value}`, 80)}</h3>
       </div>
       <div style={styleimg}>
         <img />
@@ -53,9 +56,7 @@ export default function Card({ item }) {
         <span style={styleSpan}>comments: {item.num_comments}</span>
       </div>
 
-      <div>
-        <h6>buttons</h6>
-      </div>
+      <div className="sharethis-inline-share-buttons"></div>
     </div>
   );
 }

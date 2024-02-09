@@ -8,7 +8,7 @@ export default function News({ news }) {
     flexWrap: "wrap",
     flexDirection: "row",
     justifyContent: "center",
-    border: "3px solid green",
+    border: "3px solid gray",
   };
 
   return (

@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
 
-const Structure = ({ children, news }) => {
+const Structure = ({ children }) => {
   const styles = {
-    border: "3px solid blue",
+    // border: "3px solid blue",
     height: "100vh",
+    margin: "1rem",
     display: "grid",
     gridTemplateRows: "7fr 7fr 1fr",
     gridTemplateColumns: "1fr 7fr 7fr",
