@@ -26,6 +26,7 @@ export default function App() {
   const handledSearch = () => {
     const q = search && search !== "" ? `query=${search}` : "tags=front_page";
     setQuery(q);
+    setPage(1);
   };
 
   const handledNextPage = () => {
