@@ -11,7 +11,7 @@ export default function Card({ item }) {
     flexDirection: "column",
     margin: "1%",
     maxWidth: "30%",
-    height: "25rem",
+    height: "50rem",
   };
 
   const styleh1 = {
@@ -28,7 +28,7 @@ export default function Card({ item }) {
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    padding: "0% 0% 30%",
+    padding: "0",
   };
   const styleSpan = {
     display: "block",
