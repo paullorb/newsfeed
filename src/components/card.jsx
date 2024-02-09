@@ -48,7 +48,7 @@ export default function Card({ item }) {
         </span>
         <span style={styleSpan}>
           Points: {item.points} | source website:
-          {item.url ?? fetchUrl(item.url)}
+          {fetchUrl(item.url)}
         </span>
         <span style={styleSpan}>comments: {item.num_comments}</span>
       </div>
