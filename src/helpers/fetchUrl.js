@@ -1,9 +1,9 @@
 export const fetchUrl = (path) => {
-  let domain = new URL(path, "");
-  if (domain) {
+  try {
+    let domain = new URL(path);
     domain = domain.hostname.replace("www.", "");
     return domain;
+  } catch (e) {
+    console.log("there are some error regarding ", e);
   }
-
-  return "";
 };
