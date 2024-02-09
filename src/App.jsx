@@ -2,19 +2,16 @@ import "../src/styles/App.css";
 import Structure from "../src/components/structure";
 import News from "./components/news";
 import Footer from "./components/footer";
+import Header from "./components/header";
 import { useEffect, useState } from "react";
-const stylebtn = {
-  width: "6rem",
-  padding: "0.5rem",
-};
 
 export default function App() {
   const [news, setNews] = useState([]);
   const [page, setPage] = useState(1);
   const [search, updateSearch] = useState("");
   const [query, setQuery] = useState("tags=front_page");
-
   const newsApi = `http://hn.algolia.com/api/v1/search?${query}&hitsPerPage=6&page=${page}`;
+  console.log(newsApi);
 
   const fetchData = async () => {
     try {
@@ -39,6 +36,7 @@ export default function App() {
     if (page <= 1) return;
     setPage((page) => page - 1);
   };
+
   useEffect(() => {
     fetchData();
   }, [newsApi]);
@@ -46,29 +44,14 @@ export default function App() {
   return (
     <>
       <Structure news={news}>
-        <p>
-          {page > 1 && (
-            <button style={stylebtn} onClick={handledPrevPage}>
-              prev
-            </button>
-          )}
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          <button style={stylebtn} onClick={handledNextPage}>
-            next
-          </button>
-          <label htmlFor="search">Search</label>
-          <input
-            type="text"
-            value={search}
-            name="search"
-            id="search"
-            onChange={(e) => updateSearch(e.target.value)}
-          />
-          <button style={stylebtn} onClick={handledSearch}>
-            Go!
-          </button>
-        </p>
-
+        <Header
+          page={page}
+          search={search}
+          handledPrevPage={handledPrevPage}
+          handledNextPage={handledNextPage}
+          updateSearch={updateSearch}
+          handledSearch={handledSearch}
+        />
         <News news={news} />
         <Footer />
       </Structure>

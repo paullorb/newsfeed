@@ -47,7 +47,8 @@ export default function Card({ item }) {
           {emitFormatedDate(`${item.created_at}`)}
         </span>
         <span style={styleSpan}>
-          Points: {item.points} | source website: ({fetchUrl(`${item.url}`)})
+          Points: {item.points} | source website:
+          {item.url}
         </span>
         <span style={styleSpan}>comments: {item.num_comments}</span>
       </div>
